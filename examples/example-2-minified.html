@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<title>Strona testowa</title>	
+	<LINK href="custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css">
+	<LINK href="dynatree/ui.dynatree.css" rel="stylesheet" type="text/css">
+	<LINK href="selectList/chosen.css" rel="stylesheet" type="text/css">
+	<LINK href="pot-widget.css" rel="stylesheet" type="text/css">
+	<style>
+		.pot-content {
+			border:5px solid red;
+			padding:3px;
+			width:800px;
+			overflow: auto;
+		}
+		#sov-content .t-space,
+		#sov-search-ascii,
+		#sov-category-btn,
+		#sov-clear-btn {
+			display: none;
+		}
+		#sov-content label[for=sov-search-ascii] {
+			display: none !important;
+		}
+		#sov-search-btn,
+		#sov-search-text {
+			margin: 0 !important;
+		}
+		#sov-content > div:nth-child(1),
+		div.table:nth-child(3),
+		div.row:nth-child(3),
+		div.row:nth-child(3) > div:nth-child(1) {
+			display: inline;
+		}	
+	</style>
+</head>
+<body>
+    <script src="http://rittest.poland.travel/informator-web/js/widget/widget-loader2.js" mode="max" lang="pl" widgetBaseUrl="http://rittest.poland.travel/informator-web" apiBaseUrl="http://rittest.poland.travel/informator-web"></script>
+    <div class="pot-content"></div>
+    <div id="widget_ver">Widget:</div>
+</body>
+</html>
