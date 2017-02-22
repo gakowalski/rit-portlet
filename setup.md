@@ -82,6 +82,7 @@ Pliki css należy załączyć w sekcji *<head>* w następujący sposób:
 Należy pilnować żeby *pot-widget.css* był załączony jako ostatni poniżej plików css ze stylami komponentowymi.
 
 Główne selektory klas używane w portlecie:
+
 Nazwa	| Opis
 --- | ---
 .pot-content |	Główny selektor wrappera portletu
@@ -111,20 +112,9 @@ Nazwa	| Opis
 .dataTables_processing |	Informacja „trwa przetwarzanie”
 .pot-widget-blankpage, .pot-widget-blankpage-content, |	Styl okna informującego o niedostępności API RIT
 
+## Przykładowe osadzenie portretu na stronie
 
-
-
-
-
-
-
-
-
-
-
-
-
-Przykładowe osadzenie portretu na stronie
+```html
 <!DOCTYPE html>
 <html lang="pl">
 <head>
@@ -157,3 +147,4 @@ Przykładowe osadzenie portretu na stronie
 	<div class="pot-content></div>
 </body>
 </html>
+```
