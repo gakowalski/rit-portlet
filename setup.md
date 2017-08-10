@@ -28,7 +28,7 @@ W szczególnym przypadku może to być ten sam URL.
 
 UWAGA: Została zachowana zgodność wsteczna z poprzednią wersją skryptu inicjującego *widget-loader.js*.
 
-Następnie należy załączyć ostylowanie wg wskazówek w sekcji „Zewnętrzne ostylowanie portletu RIT” oraz odpowiednio skonfigurować plik *widget-config.js* znajdujący się wewnątrz aplikacji *informator-web.war* na serwerze aplikacyjnym pod ścieżką *informator-web.war\js\widget\ widget-config.js*. W tym pliku wskazane są serwery odpowiedzialne za obsługę map, wyznaczanie tras oraz konfigurowalny komunikat o niedostępności API RIT.
+Następnie należy załączyć ostylowanie wg wskazówek w sekcji [Zewnętrzne ostylowanie portletu RIT](#zewnętrzne-ostylowanie-portletu-rit) oraz odpowiednio skonfigurować plik *widget-config.js* znajdujący się wewnątrz aplikacji *informator-web.war* na serwerze aplikacyjnym pod ścieżką *informator-web.war\js\widget\ widget-config.js*. W tym pliku wskazane są serwery odpowiedzialne za obsługę map, wyznaczanie tras oraz konfigurowalny komunikat o niedostępności API RIT.
 
 ## Obsługa stałych kryteriów wyszukiwania
 
@@ -39,7 +39,7 @@ Do portletu została dodana funkcjonalność obsługi stałych kryteriów wyszuk
 src=" http://rittest.poland.travel/informator-web/js/widget/widget-loader2.js"
 mode="max" lang="en"
 region="mazowieckie"
-categories="Agencja turystyczna,miasta"
+categories="82,83"
 widgetBaseUrl=" http://rittest.poland.travel/informator-web" apiBaseUrl="http://rittest.poland.travel/informator-web">
 </script>
 ```
@@ -59,7 +59,7 @@ Komunikat można konfigurować w następujący sposób:
 * w pliku *widget-config.js* znajduje się treść komunikatu pod zmienną *InfWidget.API_NOT_RECHABLE*;
 * w pliku *pot-widget.css* znajdują się następujące klasy styli: **.pot-widget-blankpage** – styl div’a wrapującego komunikat wewnątrz diva głównego (*.pot-content*); **.pot-widget-blankpage-content** – styl contentu (treści informacji) wewnątrz div’a *.pot-widget-blankpage*.
 
-## Zewnętrzne ostylowanie portletu RIT.
+## Zewnętrzne ostylowanie portletu RIT
 
 W obecnym rozwiązaniu style CSS dotyczące portletu zostały przeniesione bezpośrednio na stronę, w której jest on osadzony, co umożliwia ich zewnętrzne zarządzanie. Głównym plikiem ze stylami jest *pot-widget.css*, w którym znajdują się dedykowane style dla Aplikacji RIT oraz nadpisywane style używanych w portlecie komponentów (*dynatree*, *choosen* i *jquery-ui*).
 
