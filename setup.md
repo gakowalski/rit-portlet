@@ -8,8 +8,8 @@ Instalacja odbywa się poprzez zamieszczenie na stronie znacznika
 <div class="pot-content" />
 ```
 
-Do którego zostanie załadowana zawartość portletu za pomocą skryptu inicjującego *widget-loader2.js*
-.
+Do którego zostanie załadowana zawartość portletu za pomocą skryptu inicjującego *widget-loader2.js*.
+
 Skrypt inicjujący należy dodać do sekcji *<head>* w następującej postaci:
 
 ```html
@@ -21,20 +21,18 @@ widgetBaseUrl=" http://rittest.poland.travel/informator-web" apiBaseUrl="http://
 ```
 
 Argumenty:
+* **widgetBaseUrl** wskazuje na serwer na którym jest osadzona Aplikacja Informator.
+* **apiBaseUrl** wskazuje na serwer który dostarcza danych do portletu.
 
-**widgetBaseUrl** wskazuje na serwer na którym jest osadzona aplikacja informator
+W szczególnym przypadku może to być ten sam URL.
 
-**apiBaseUrl** wskazuje na serwer który dostarcza danych do portletu
-
-W szczególnym przypadku może to być ten sam url.
-
-UWAGA: Została zachowana zgodność wsteczna z poprzednią wersją skryptu inicjującego widget-loader.js
+UWAGA: Została zachowana zgodność wsteczna z poprzednią wersją skryptu inicjującego *widget-loader.js*.
 
 Następnie należy załączyć ostylowanie wg wskazówek w sekcji „Zewnętrzne ostylowanie portletu RIT” oraz odpowiednio skonfigurować plik *widget-config.js* znajdujący się wewnątrz aplikacji *informator-web.war* na serwerze aplikacyjnym pod ścieżką *informator-web.war\js\widget\ widget-config.js*. W tym pliku wskazane są serwery odpowiedzialne za obsługę map, wyznaczanie tras oraz konfigurowalny komunikat o niedostępności API RIT.
 
 ## Obsługa stałych kryteriów wyszukiwania
 
-Do portletu została dodana funkcjonalność obsługi stałych kryteriów wyszukiwania, które domyślnie zawężają wyniki wyszukiwania obiektów. Kryteria ustawia się w sekcji script tak jak wskazuje przykład:
+Do portletu została dodana funkcjonalność obsługi stałych kryteriów wyszukiwania, które domyślnie zawężają wyniki wyszukiwania obiektów. Kryteria ustawia się w sekcji *script* tak jak wskazuje przykład:
 
 ```html
 <script
@@ -51,24 +49,19 @@ Kryterium *region* dotyczy województwa. Dopuszczalna jest pojedyncza wartość 
 Kryterium *categories* dotyczy kategorii obiektów. Dopuszczalna jest lista kategorii po przecinku. Wielkość liter nie ma znaczenia.
 
 Uwagi:
--	Zastosowanie niewłaściwej bądź nieistniejącej kategorii sprawia, że nie trafia ona do filtra wyszukiwania
--	Pominięcie parametru categories albo nie podanie w nim żadnej wartości sprawia, że filtr jest pusty, więc domyślnie wyszukiwane są wszystkie obiekty w każdej kategorii
--	Lista kategorii zachowuje swoją hierarchiczność. Oznacza to, że zastosowanie kategorii wyższego rzędu, np. ROOT i jakiejkolwiek jego kategorii podrzędnej powoduje wyszukiwanie obiektów w kategorii ROOT.
+*	Zastosowanie niewłaściwej bądź nieistniejącej kategorii sprawia, że nie trafia ona do filtra wyszukiwania;
+*	Pominięcie parametru *categories* albo nie podanie w nim żadnej wartości sprawia, że filtr jest pusty, więc domyślnie wyszukiwane są wszystkie obiekty w każdej kategorii;
+*	Lista kategorii zachowuje swoją hierarchiczność. Oznacza to, że zastosowanie kategorii wyższego rzędu, np. ROOT i jakiejkolwiek jego kategorii podrzędnej powoduje wyszukiwanie obiektów w kategorii ROOT.
 
 ## Konfiguracja informacji o niedostępności API RIT
 
 Komunikat można konfigurować w następujący sposób:
-
-W pliku *widget-config.js* znajduje się treść komunikatu pod zmienną *InfWidget.API_NOT_RECHABLE*
-
-W pliku ze stylami *pot-widget.css* znajdują się następujące klasy styli:
-**.pot-widget-blankpage** – styl div’a wrapującego komunikat wewnątrz diva głównego (*.pot-content*)
-
-**.pot-widget-blankpage-content** – styl contentu (treści informacji) wewnątrz div’a *.pot-widget-blankpage*
+* w pliku *widget-config.js* znajduje się treść komunikatu pod zmienną *InfWidget.API_NOT_RECHABLE*;
+* w pliku *pot-widget.css* znajdują się następujące klasy styli: **.pot-widget-blankpage** – styl div’a wrapującego komunikat wewnątrz diva głównego (*.pot-content*); **.pot-widget-blankpage-content** – styl contentu (treści informacji) wewnątrz div’a *.pot-widget-blankpage*.
 
 ## Zewnętrzne ostylowanie portletu RIT.
 
-W obecnym rozwiązaniu style css dotyczące portletu zostały przeniesione bezpośrednio na stronę, w której jest on osadzony, co umożliwia ich zewnętrzne zarządzanie. Głównym plikiem ze stylami jest *pot-widget.css*, w którym znajdują się dedykowane style dla aplikacji rit oraz nadpisywane style używanych w portlecie komponentów (*dynatree*, *choosen* i *jquery-ui*).
+W obecnym rozwiązaniu style CSS dotyczące portletu zostały przeniesione bezpośrednio na stronę, w której jest on osadzony, co umożliwia ich zewnętrzne zarządzanie. Głównym plikiem ze stylami jest *pot-widget.css*, w którym znajdują się dedykowane style dla Aplikacji RIT oraz nadpisywane style używanych w portlecie komponentów (*dynatree*, *choosen* i *jquery-ui*).
 
 Pliki css należy załączyć w sekcji *<head>* w następujący sposób:
 
@@ -79,7 +72,7 @@ Pliki css należy załączyć w sekcji *<head>* w następujący sposób:
 	<LINK href="pot-widget.css" rel="stylesheet" type="text/css">
 ```
 
-Należy pilnować żeby *pot-widget.css* był załączony jako ostatni poniżej plików css ze stylami komponentowymi.
+Należy dopilnować żeby *pot-widget.css* był załączony jako ostatni poniżej plików css ze stylami komponentowymi.
 
 Główne selektory klas używane w portlecie:
 
@@ -121,7 +114,6 @@ Nazwa	| Opis
 	<meta charset="utf-8">
 	<title>Strona testowa</title>
 
-
    <script
         src=http://rittest.poland.travel/informator-web/js/widget/widget-loader2.js
         mode="max" lang="en"
@@ -135,16 +127,9 @@ Nazwa	| Opis
    <LINK href="dynatree/ui.dynatree.css" rel="stylesheet" type="text/css">
    <LINK href="selectList/chosen.css" rel="stylesheet" type="text/css">
    <LINK href="pot-widget.css" rel="stylesheet" type="text/css">
-
-   <!--
-   <script region="mazowieckie" mode="max" lang="en"  
-   infBaseUrl="http://127.0.0.1:8080/informator-web"
-   src="http://rittest.poland.travel/informator-web/js/widget/widget-loader.js">
-   </script>
-   -->
 </head>
 <body>
-	<div class="pot-content></div>
+	<div class="pot-content"></div>
 </body>
 </html>
 ```
