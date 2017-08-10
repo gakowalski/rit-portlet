@@ -2,10 +2,10 @@
 
 ## Instalacja portletu
 
-Instalacja odbywa się poprzez zamieszczenie na stronie znacznika
+Instalacja odbywa się poprzez zamieszczenie w kodzie strony znacznika:
 
 ```html
-<div class="pot-content" />
+<div class="pot-content"></div>
 ```
 
 Do którego zostanie załadowana zawartość portletu za pomocą skryptu inicjującego *widget-loader2.js*.
@@ -20,7 +20,7 @@ widgetBaseUrl=" http://rittest.poland.travel/informator-web" apiBaseUrl="http://
 </script>
 ```
 
-Argumenty:
+Atrybuty:
 * **widgetBaseUrl** wskazuje na serwer na którym jest osadzona Aplikacja Informator.
 * **apiBaseUrl** wskazuje na serwer który dostarcza danych do portletu.
 
@@ -44,9 +44,9 @@ widgetBaseUrl=" http://rittest.poland.travel/informator-web" apiBaseUrl="http://
 </script>
 ```
 
-Kryterium *region* dotyczy województwa. Dopuszczalna jest pojedyncza wartość , wielkość liter bez znaczenia
-
-Kryterium *categories* dotyczy kategorii obiektów. Dopuszczalna jest lista kategorii po przecinku. Wielkość liter nie ma znaczenia.
+Atrybuty:
+* *region* wskazuje województwo. Dopuszczalna jest pojedyncza wartość , wielkość liter bez znaczenia
+* *categories* wskazuje ID kategorii obiektów. Możliwa jest lista kategorii po przecinku.
 
 Uwagi:
 *	Zastosowanie niewłaściwej bądź nieistniejącej kategorii sprawia, że nie trafia ona do filtra wyszukiwania;
@@ -66,10 +66,10 @@ W obecnym rozwiązaniu style CSS dotyczące portletu zostały przeniesione bezpo
 Pliki css należy załączyć w sekcji *<head>* w następujący sposób:
 
 ```html
-	<LINK href="custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css">
-	<LINK href="dynatree/ui.dynatree.css" rel="stylesheet" type="text/css">
-	<LINK href="selectList/chosen.css" rel="stylesheet" type="text/css">
-	<LINK href="pot-widget.css" rel="stylesheet" type="text/css">
+<LINK href="custom-theme/jquery-ui-1.9.2.custom.css" rel="stylesheet" type="text/css">
+<LINK href="dynatree/ui.dynatree.css" rel="stylesheet" type="text/css">
+<LINK href="selectList/chosen.css" rel="stylesheet" type="text/css">
+<LINK href="pot-widget.css" rel="stylesheet" type="text/css">
 ```
 
 Należy dopilnować żeby *pot-widget.css* był załączony jako ostatni poniżej plików css ze stylami komponentowymi.
@@ -116,10 +116,10 @@ Nazwa	| Opis
 
    <script
         src=http://rittest.poland.travel/informator-web/js/widget/widget-loader2.js
-        mode="max" lang="en"
-	 region="mazowieckie"
-	 categories="Agencja turystyczna,miasta"
-        widgetBaseUrl="http://rittest.poland.travel/informator-web"       
+        mode="max" lang="pl"
+	 			region="mazowieckie"
+	 			categories="82,83"
+	 			widgetBaseUrl="http://rittest.poland.travel/informator-web"       
         apiBaseUrl="http://rittest.poland.travel/informator-web">
    </script>
 
@@ -133,3 +133,10 @@ Nazwa	| Opis
 </body>
 </html>
 ```
+
+## Inne przykłady
+
+* [Pełen portlet bez ograniczen](examples/example-1-default.html);
+* [Portlet minimalny](examples/example-2-minified.html) - jako pojedyczne pole *input*, przykład dostosowania CSS-em;
+* [Portlet z ograniczeniem do województwa](examples/example-3-preselected-region.html);
+* [Potrlet z ograniczeniem do województwa i kategorii](examples/example-4-preselected-region-and-category.html).
