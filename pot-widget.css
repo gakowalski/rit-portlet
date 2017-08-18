@@ -755,7 +755,6 @@ formularze
 	padding: 2px 5px;
 	margin: 0 3px;
 	cursor: pointer;
-	*cursor: hand;
 	color: white;
 }
 
@@ -1182,10 +1181,6 @@ formularze
 
 .pot-gradient-bg:hover{
     border: 1px solid #cccccc;
-}
-
-.pot-gradient-bg:focus{
-    /*box-shadow: 0 0 2px #FFFE00;*/
 }
 
 .pot-inv-gradient-bg, .dataTables_empty {
