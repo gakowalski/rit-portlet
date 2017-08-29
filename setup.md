@@ -46,7 +46,7 @@ widgetBaseUrl=" http://rittest.poland.travel/informator-web" apiBaseUrl="http://
 
 Atrybuty:
 * *region* wskazuje województwo. Dopuszczalna jest pojedyncza wartość , wielkość liter bez znaczenia
-* *categories* wskazuje ID kategorii obiektów. Możliwa jest lista kategorii po przecinku.
+* *categories* wskazuje ID kategorii obiektów. Możliwa jest lista kategorii po przecinku. ID kategorii można uzyskac korzystajac z [odpowiedniego wywolania API REST](https://github.com/pot-gov-pl/rit-dokumentacja/blob/master/rest-v1.md#7pobranie-drzewa-kategorii).
 
 Uwagi:
 *	Zastosowanie niewłaściwej bądź nieistniejącej kategorii sprawia, że nie trafia ona do filtra wyszukiwania;
